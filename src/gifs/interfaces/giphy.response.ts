@@ -12,17 +12,17 @@ export interface GiphyGif {
   bitly_gif_url: string;
   bitly_url: string;
   embed_url: string;
-  username: Username;
+  // username: Username;
   source: string;
   title: string;
   rating: Rating;
   content_url: string;
-  source_tld: SourceTLD;
+  // source_tld: SourceTLD;
   source_post_url: string;
   source_caption?: string;
   is_sticker: number;
   import_datetime: Date;
-  trending_datetime: Date | TrendingDatetimeEnum;
+  // trending_datetime: Date | TrendingDatetimeEnum;
   images: Images;
   user?: User;
   analytics_response_payload: string;
@@ -64,50 +64,39 @@ export interface FixedHeight {
   hash?: string;
 }
 
-export enum Rating {
-  G = "g",
-}
+export type Rating = "G" | "PG";
 
-export enum SourceTLD {
-  Empty = "",
-  KnowyourmemeCOM = "knowyourmeme.com",
-  NewsCapcomusaCOM = "news.capcomusa.com",
-  WWWInstagramCOM = "www.instagram.com",
-}
+// export enum SourceTLD {
+//   Empty = "",
+//   KnowyourmemeCOM = "knowyourmeme.com",
+//   NewsCapcomusaCOM = "news.capcomusa.com",
+//   WWWInstagramCOM = "www.instagram.com",
+// }
 
-export enum TrendingDatetimeEnum {
-  The00000000000000 = "0000-00-00 00:00:00",
-}
+// export enum TrendingDatetimeEnum {
+//   The00000000000000 = "0000-00-00 00:00:00",
+// }
 
-export enum Type {
-  GIF = "gif",
-}
+export type Type = "gif";
 
 export interface User {
   avatar_url: string;
   banner_image: string;
   banner_url: string;
   profile_url: string;
-  username: Username;
-  display_name: DisplayName;
+  // username: Username;
+  // display_name: DisplayName;
   description: string;
   instagram_url: string;
   website_url: string;
   is_verified: boolean;
 }
 
-export enum DisplayName {
-  AlexBoya = "Alex Boya",
-  Capcom = "CAPCOM",
-  UnaiVellido = "Unai Vellido",
-}
-
-export enum Username {
-  Alexboya = "alexboya",
-  Capcom = "Capcom",
-  Empty = "",
-  Unaivellido = "unaivellido",
-}
+// export enum DisplayName {
+//   AlexBoya = "Alex Boya",
+//   Capcom = "CAPCOM",
+//   UnaiVellido = "Unai Vellido",
+// }
 
 export interface Meta {
   status: number;
